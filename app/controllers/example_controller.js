@@ -2,11 +2,8 @@
 
 // Elements
 const lblGreeting = document.getElementById('lblGreeting') // Greeting label
-const btnRandom = document.getElementById('btnRandom') // Random button
 const txtName = document.getElementById('txtName') // Name input
-const btnMessage = document.getElementById('btnMessage') // Message button
 const txtItem = document.getElementById('txtItem') // Item input
-const btnAddItem = document.getElementById('btnAddItem') // Item adding button
 const conItems = document.getElementById('conItems') // Item list container
 
 const itemTemplate = `
@@ -34,7 +31,7 @@ function renderList(list = []) {
 
 // Simple text fetch
 function getGreeting() {
-    api.fetch('/').then((res) => res.text()).then((greeting) => (lblGreeting.innerText = greeting))
+    api.fetch('/').then((res) => res.text()).then((greeting) => lblGreeting.innerText = greeting)
 }
 
 // Random message
